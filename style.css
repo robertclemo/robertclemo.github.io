@@ -14,35 +14,34 @@ body
   min-height: 100vh;
   background: rgb(73, 110, 64);
 }
-h2
+.content
 {
   position: relative;
-  margin: 20px 0 0;
-  font-size: 4em;
-  font-weight: 900;
-  color: rgb(57, 246, 10);
-  z-index: 1;
-  overflow: hidden;
 }
-h2:before
+.content h2
 {
-  content: '';
   position: absolute;
-  left: 110%;
-  width: 120%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgb(73, 110, 64) 100%);
-  animation: animate 5.5s linear forwards;
-  animation-delay: 2s;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+}
+.content h2:nth-child(1)
+{
+  color: transparent;
+  -webcit-text-stroke: 2px #27f403;
+}
+.content h2:nth-child(2)
+{
+  color: #27f403;
+  animation: animate 4s ease-in-out infinite;
 }
 @keyframes animate
 {
-  0%
+  0%,100%
   {
-    left 110%
+    clip-path: polygon(0 64%, 11% 59%, 22% 55%, 33% 57%, 43% 61%, 51% 65%, 59% 64%, 68% 60%, 80% 57%, 93% 57%, 100% 61%, 100% 100%, 0% 100%);
   }
-  100%
+  50%
   {
-    left: -20%
+    clip-path: polygon(0 56%, 12% 60%, 20% 66%, 30% 71%, 41% 70%, 53% 64%, 61% 55%, 69% 50%, 81% 53%, 91% 54%, 100% 53%, 100% 100%, 0% 100%);
   }
 }
