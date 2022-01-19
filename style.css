@@ -27,7 +27,7 @@ body
 .content h5:nth-child(1)
 {
     color: transparent;
-    -webkit-text-stroke: 2px #03a9f4;
+    -webkit-text-stroke: 2px red;
 }
 .content h5:nth-child(2)
 {
